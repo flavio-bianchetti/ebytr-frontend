@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# Ebytr - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+:rotating_light: Se você não está acostumado com _inglês_, pode encontrar a versão deste documento em _português_ _[aqui](#-Versão-em-português---Ebytr-frontend)_.
 
-## Available Scripts
+This repository contains the project "_Ebytr - Frontend_", technical challenge - Career Blitz - Trybe. This project consists of a to-do list application, made in React, NodeJS, MongoDB and layered architecture.
+The "_Ebytr - Backend_" can be viewed _[here]()_.
 
-In the project directory, you can run:
 
-### `npm start`
+### Functionalities:
+- View the task list;
+- This list must be sorted alphabetically, by creation date or by status;
+- Insert a new task in the list;
+- Remove a task from the list;
+- Update a task from the list;
+- The task must have an editable status: pending, in progress or ready;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Author:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- _[Flávio Bianchetti](https://www.linkedin.com/in/flaviobianchetti/)_
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Were used in the construction of this page:
 
-### `npm run build`
+<section>
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+    target="_blank">
+    <img
+      align="center"
+      height="30"
+      src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+    />
+  </a>
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+    target="_blank">
+    <img
+      align="center"
+      height="30"
+      src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"
+    />
+  </a>
+</section>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Author's considerations:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- (...)
+- (...)
+- There is no schedule of changes planned for this project.
 
-### `npm run eject`
+You can see the result of this project _[here]()_.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+by _[Flávio Bianchetti - 2021](https://github.com/flavio-bianchetti)_.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Versão em português - Ebytr - Frontend
 
-## Learn More
+Este repositório contém o projeto "_Ebytr - Frontend_", desafio técnico - Blitz de Carreira - Trybe. Este projeto consiste em uma aplicação de lista de tarefas, feita em React, NodeJS, MongoDB e arquitetura em camadas.
+O "_Ebytr - Backend_" pode ser visualizado _[aqui]()_.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Funcionalidades: 
+- Visualizar a lista de tarefas;
+- Esta lista deve ser ordenável por ordem alfabética, data de criação ou por status;
+- Inserir uma nova tarefa na lista;
+- Remover uma tarefa da lista;
+- Atualizar uma tarefa da lista;
+- A tarefa deve possuir um status editável: pendente, em andamento ou pronto;
 
-### Code Splitting
+### Autor:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- _[Flávio Bianchetti](https://www.linkedin.com/in/flaviobianchetti/)_
 
-### Analyzing the Bundle Size
+---
+### Foram utilizados na construção desta página:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<section>
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+    target="_blank">
+    <img
+      align="center"
+      height="30"
+      src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+    />
+  </a>
+  <a
+    href="https://developer.mozilla.org/en-US/docs/Web/CSS"
+    target="_blank">
+    <img
+      align="center"
+      height="30"
+      src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"
+    />
+  </a>
+</section>
 
-### Making a Progressive Web App
+---
+###Considerações do autor:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- (...)
+- (...)
+- Não há calendário de alterações previstas para este projeto.
 
-### Advanced Configuration
+Você pode ver o resultado deste projeto _[aqui]()_.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+por _[Flávio Bianchetti - 2021](https://github.com/flavio-bianchetti)_.
