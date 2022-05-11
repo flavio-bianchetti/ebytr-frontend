@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ValidateEmail, ValidatePassword } from '../utils';
 
 const Login = () => {
   const [email, setEmail] = useState('');
