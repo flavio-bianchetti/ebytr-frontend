@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ValidateEmail, ValidatePassword } from '../utils';
 
 const Login = () => {
@@ -6,6 +6,11 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isValidPassword, setIsValidPassword] = useState(false);
+
+  useEffect(() => {
+    setIsValidEmail(ValidateEmail(email));
+    setIsValidPassword(ValidatePassword(password));
+  }, [email, password]);
 
   return (
     <div>
