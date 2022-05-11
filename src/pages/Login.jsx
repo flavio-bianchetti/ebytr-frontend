@@ -44,7 +44,7 @@ const Login = () => {
           className="login-button"
           data-testid="button-login"
           type="submit"
-          disabled={!isValidEmail || !isValidPassword}
+          disabled={ !isValidEmail || !isValidPassword }
         >
           Entrar
         </button>
