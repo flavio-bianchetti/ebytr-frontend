@@ -23,15 +23,18 @@ describe('1 - Crie uma página de login', () => {
     setup();
     expect(screen.getByTestId('form')).toBeInTheDocument();
   });
+
   it('Renderiza corretamente o campo de digitação do email', () => {
     setup();
     expect(screen.getByTestId('input-email')).toBeInTheDocument();
   });
+
   it('Renderiza corretamente o campo de digitação de senha', () => {
     setup();
     expect(screen.getByTestId('input-password')).toBeInTheDocument();
   });
-  it('Renderiza corretamente o botão de login', () => {
+
+  it('Renderiza corretamente o botão "Entrar"', () => {
     setup();
     expect(screen.getByTestId('button-login')).toBeInTheDocument();
   });
