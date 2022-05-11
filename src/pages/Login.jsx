@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
 import { ValidateEmail, ValidatePassword } from '../utils';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isValidPassword, setIsValidPassword] = useState(false);
+  const history = useNavigate();
+
+  const login = async () => {
+    history('/todolist');
+  };
 
   useEffect(() => {
     setIsValidEmail(ValidateEmail(email));
@@ -16,6 +22,7 @@ const Login = () => {
     <div>
       <h1>Login</h1>
       <form
+        onSubmit={ login }
         data-testid="form"
       >
         <label htmlFor="email-label">
