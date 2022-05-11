@@ -38,4 +38,9 @@ describe('1 - Crie uma página de login', () => {
     setup();
     expect(screen.getByTestId('button-login')).toBeInTheDocument();
   });
+
+  it('o botão "Entrar" está desabilitado', () => {
+    setup();
+    expect(screen.getByTestId('button-login')).toBeDisabled();
+  });
 });
