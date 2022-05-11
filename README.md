@@ -1,6 +1,6 @@
 # Ebytr - Frontend
 
-:rotating_light: Se você não está acostumado com _inglês_, pode encontrar a versão deste documento em _português_ _[aqui](#-Versão-em-português---Ebytr-frontend)_.
+:rotating_light: Você pode encontrar a versão deste documento em português _[aqui](#versão-em-português---ebytr---frontend)_.
 
 This repository contains the project "_Ebytr - Frontend_", technical challenge - Career Blitz - Trybe. This project consists of a to-do list application, made in React, NodeJS, MongoDB and layered architecture.
 The "_Ebytr - Backend_" can be viewed _[here]()_.
