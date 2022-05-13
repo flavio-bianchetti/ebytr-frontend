@@ -9,7 +9,14 @@ const Login = () => {
   const [isValidPassword, setIsValidPassword] = useState(false);
   const history = useNavigate();
 
-  const login = async () => {
+  const login = async (event) => {
+    event.preventDefault();
+    // verifica se o e-mail está cadastrado
+    // se não estiver, exibe mensagem de erro.
+    // se estiver, grava vai gravar, email, nome e token no localStorage (abaixo).
+    const nome = 'Teste';
+    const token = '123.456.789';
+    localStorage.setItem('ebytrUser', JSON.stringify({ email, nome, token }));
     history('/todolist');
   };
 
