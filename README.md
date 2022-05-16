@@ -3,7 +3,7 @@
 :rotating_light: Você pode encontrar a versão deste documento em português _[aqui](#versão-em-português---ebytr---frontend)_.
 
 This repository contains the project "_Ebytr - Frontend_", technical challenge - Career Blitz - Trybe. This project consists of a to-do list application, made in React, NodeJS, MongoDB and layered architecture.
-The "_Ebytr - Backend_" can be viewed _[here]()_.
+The "_Ebytr - Backend_" can be viewed _[here](https://github.com/flavio-bianchetti/ebytr-backend)_.
 
 
 ### Functionalities:
@@ -24,15 +24,15 @@ The "_Ebytr - Backend_" can be viewed _[here]()_.
 
 <section>
   <a
-    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+    href="https://pt-br.reactjs.org/docs/getting-started.html"
     target="_blank">
     <img
       align="center"
       height="30"
-      src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+      src="https://img.shields.io/badge/React-563D7C?style=for-the-badge&logo=react&logoColor=61DAFB"
     />
   </a>
-  <a
+  <!-- <a
     href="https://developer.mozilla.org/en-US/docs/Web/CSS"
     target="_blank">
     <img
@@ -40,18 +40,16 @@ The "_Ebytr - Backend_" can be viewed _[here]()_.
       height="30"
       src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"
     />
-  </a>
+  </a> -->
 </section>
 
 ---
 
 ### Author's considerations:
 
-- (...)
-- (...)
-- There is no schedule of changes planned for this project.
+- The project is still under development. I'm working on the functionality and testing of the login and task list pages.
 
-You can see the result of this project _[here]()_.
+<!-- You can see the result of this project _[here]()_. -->
 
 ---
 
@@ -63,7 +61,7 @@ by _[Flávio Bianchetti - 2021](https://github.com/flavio-bianchetti)_.
 # Versão em português - Ebytr - Frontend
 
 Este repositório contém o projeto "_Ebytr - Frontend_", desafio técnico - Blitz de Carreira - Trybe. Este projeto consiste em uma aplicação de lista de tarefas, feita em React, NodeJS, MongoDB e arquitetura em camadas.
-O "_Ebytr - Backend_" pode ser visualizado _[aqui]()_.
+O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bianchetti/ebytr-backend)_.
 
 
 ### Funcionalidades: 
@@ -88,10 +86,10 @@ O "_Ebytr - Backend_" pode ser visualizado _[aqui]()_.
     <img
       align="center"
       height="30"
-      src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white"
+      src="https://img.shields.io/badge/React-563D7C?style=for-the-badge&logo=react&logoColor=61DAFB"
     />
   </a>
-  <a
+  <!-- <a
     href="https://developer.mozilla.org/en-US/docs/Web/CSS"
     target="_blank">
     <img
@@ -99,17 +97,15 @@ O "_Ebytr - Backend_" pode ser visualizado _[aqui]()_.
       height="30"
       src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"
     />
-  </a>
+  </a> -->
 </section>
 
 ---
 ###Considerações do autor:
 
-- (...)
-- (...)
-- Não há calendário de alterações previstas para este projeto.
+- O projeto ainda está em desenvolvimento. Estou trabalhando nas funcionalidades e testes das páginas de login e lista de tarefas.
 
-Você pode ver o resultado deste projeto _[aqui]()_.
+<!-- Você pode ver o resultado deste projeto _[aqui]()_. -->
 
 ---
 
