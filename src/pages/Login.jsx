@@ -1,23 +1,22 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { ValidateEmail, ValidatePassword } from '../utils';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import TodoListContext from '../context/TodoListContext';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isValidPassword, setIsValidPassword] = useState(false);
-  const history = useNavigate();
+  const { requestAccess } = useContext(TodoListContext);
+  const history = useHistory();
 
   const login = async (event) => {
     event.preventDefault();
-    // verifica se o e-mail está cadastrado
-    // se não estiver, exibe mensagem de erro.
-    // se estiver, grava vai gravar, email, nome e token no localStorage (abaixo).
-    const nome = 'Teste';
-    const token = '123.456.789';
-    localStorage.setItem('ebytrUser', JSON.stringify({ email, nome, token }));
-    history('/todolist');
+    if (isValidEmail && isValidPassword) {
+      requestAccess(email, password);
+      history.push('/todolist');
+    }
   };
 
   useEffect(() => {
