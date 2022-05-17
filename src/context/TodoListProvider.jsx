@@ -26,12 +26,33 @@ const TodoListProvider = ({ children }) => {
     setUserInfo({ name, email, token });
   };
 
+  const insertTask = (description, status) => {
+    const ordenedTasks = todoList.sort((a, b) => a.id - b.id);
+    const lastTask = ordenedTasks[ordenedTasks.length - 1] || { id: 0};
+    const id = lastTask.id + 1;
+    const date = new Date().toLocaleString();
+    const newTodoList = [...todoList, { id, description, date, status }];
+    setTodoList(newTodoList);
+  };
+
+  const updateTask = (id, description) => {
+    const newTodoList = todoList.map((task) => {
+      if (task.id === id) {
+        task.description = description;
+      }
+      return task;
+    });
+    setTodoList(newTodoList);
+    setTaskToUpdate({});
+  };
+
   const todoListValues = {
     todoList,
     userInfo,
     insertTask,
     requestAccess,
     taskToUpdate,
+    updateTask,
   };
 
   return (
