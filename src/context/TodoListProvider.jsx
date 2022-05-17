@@ -46,6 +46,43 @@ const TodoListProvider = ({ children }) => {
     setTaskToUpdate({});
   };
 
+  const selectTaskToUpdate = (id, description) => {
+    setTaskToUpdate({ id, description });
+  }
+
+  const deleteTask = (id) => {
+    const newTodoList = todoList.filter((task) => task.id !== id);
+    setTodoList(newTodoList);
+  };
+
+  const updateStatus = (id, status) => {
+    const newTodoList = todoList.map((task) => {
+      if (task.id === id) {
+        task.status = status;
+      }
+      return task;
+    });
+    setTodoList(newTodoList);
+  };
+
+  // solução adaptada do site:
+  // https://stackoverflow.com/questions/66147595/sorting-state-array-of-objects-by-object-key-in-react
+  const orderBy = (field) => {
+    const ordenedTasks = todoList
+      .sort((a, b) => {
+        if (a[field] < b[field]){
+          return -1
+        } else if (a[field] > b[field]){
+            return 1
+        } else {
+          return 0
+        }
+      })
+      .map((task) => task);
+    console.log(ordenedTasks);
+    setTodoList(ordenedTasks);
+  };
+
   const todoListValues = {
     todoList,
     userInfo,
@@ -53,6 +90,10 @@ const TodoListProvider = ({ children }) => {
     requestAccess,
     taskToUpdate,
     updateTask,
+    selectTaskToUpdate,
+    deleteTask,
+    updateStatus,
+    orderBy,
   };
 
   return (
