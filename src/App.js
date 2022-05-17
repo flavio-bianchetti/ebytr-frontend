@@ -1,15 +1,15 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 import Login from './pages/Login';
 import TodoList from './pages/TodoList';
 
-function App() {
+const App = () => {
   return (
-    <Routes>
-      <Route path="/todolist" element={ <TodoList /> } />
-      <Route path="/login" element={ <Login /> } />
-      <Route exact path="/" element={ <Navigate to="/login" /> } />
-    </Routes>
+    <Switch>
+      <Route exact path="/" component={ Login } />
+      <Route path="/todolist" component={ TodoList } />
+    </Switch>
   );
-}
+};
 
 export default App;
