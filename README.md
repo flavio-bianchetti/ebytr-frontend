@@ -20,11 +20,11 @@ The "_Ebytr - Backend_" can be viewed _[here](https://github.com/flavio-bianchet
 
 ---
 
-### Were used in the construction of this page:
+### Technologies used in the construction of this application:
 
 <section>
   <a
-    href="https://pt-br.reactjs.org/docs/getting-started.html"
+    href="https://reactjs.org/"
     target="_blank">
     <img
       align="center"
@@ -47,7 +47,7 @@ The "_Ebytr - Backend_" can be viewed _[here](https://github.com/flavio-bianchet
 
 ### Author's considerations:
 
-- The project is still under development. I'm working on the functionality and testing of the login and task list pages.
+- This project is under development. Wait for information.
 
 <!-- You can see the result of this project _[here]()_. -->
 
@@ -77,11 +77,11 @@ O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bia
 - _[Flávio Bianchetti](https://www.linkedin.com/in/flaviobianchetti/)_
 
 ---
-### Foram utilizados na construção desta página:
+### Tecnologias utilizadas na construção desta aplicação:
 
 <section>
   <a
-    href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+    href="https://pt-br.reactjs.org/docs/getting-started.html"
     target="_blank">
     <img
       align="center"
@@ -103,7 +103,7 @@ O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bia
 ---
 ###Considerações do autor:
 
-- O projeto ainda está em desenvolvimento. Estou trabalhando nas funcionalidades e testes das páginas de login e lista de tarefas.
+- Este projeto encontra-se em desenvolvimento. Aguarde informações.
 
 <!-- Você pode ver o resultado deste projeto _[aqui]()_. -->
 
