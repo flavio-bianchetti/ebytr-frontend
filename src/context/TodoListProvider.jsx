@@ -17,13 +17,8 @@ const TodoListProvider = ({ children }) => {
     localStorage.setItem('ebytrTodoList', JSON.stringify(todoList));
   }, [todoList]);
 
-  const requestAccess = (email, password) => {
-    //verificar usuário no bd. se não existir, retornar erro.
-    // se existir, gravar as informações recebidas junto com o token.
-    console.log(password);
-    const name = 'Teste';
-    const token = '123.456.789';
-    setUserInfo({ name, email, token });
+  const requestAccess = (email, name, token) => {
+    setUserInfo({ email, name, token });
   };
 
   const insertTask = (description, status) => {
@@ -79,7 +74,6 @@ const TodoListProvider = ({ children }) => {
         }
       })
       .map((task) => task);
-    console.log(ordenedTasks);
     setTodoList(ordenedTasks);
   };
 
