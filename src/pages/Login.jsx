@@ -2,26 +2,39 @@ import React, { useState, useEffect, useContext } from 'react';
 import { ValidateEmail, ValidatePassword } from '../utils';
 import { useHistory } from 'react-router-dom';
 import TodoListContext from '../context/TodoListContext';
+import { requestLogin } from '../services/request';
 
 const Login = () => {
   const [userEmail, setUserEmail] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isValidPassword, setIsValidPassword] = useState(false);
+  const [isInvalidUser, setIsInvalidUser] = useState(false);
   const { requestAccess } = useContext(TodoListContext);
   const history = useHistory();
 
   const login = async (event) => {
     event.preventDefault();
     if (isValidEmail && isValidPassword) {
-      requestAccess(email, password);
-      history.push('/todolist');
+
+      try {
+        const response = await requestLogin(
+          '/login', 
+          { email: userEmail, password: userPassword },
+        );
+        requestAccess(response.email, response.name, response.token);
+        history.push('/todolist');
+      } catch (err) {
+        console.log(err);
+        setIsInvalidUser(true);
+      }
     }
   };
 
   useEffect(() => {
     setIsValidEmail(ValidateEmail(userEmail));
     setIsValidPassword(ValidatePassword(userPassword));
+    setIsInvalidUser(false);
   }, [userEmail, userPassword]);
 
   return (
@@ -65,6 +78,10 @@ const Login = () => {
       { 
         ((userEmail.length > 0 && !isValidEmail) || (userPassword.length > 0 && !isValidPassword)) 
         && <p>É necessário um e-mail válido e uma senha com 6 caracteres ou mais.</p> 
+      }
+      { 
+        (isInvalidUser) 
+        && <p>Usuário e/ou senha inválidos!</p> 
       }
     </div>
   );
