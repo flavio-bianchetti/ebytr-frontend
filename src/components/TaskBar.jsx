@@ -1,22 +1,40 @@
 import React, { useState, useEffect, useContext } from 'react';
 import TodoListContext from '../context/TodoListContext';
+import { setData, updateData } from '../services/request';
 
 const TaskBar = () => {
   const [description, setDescription] = useState('');
   const {
+    userInfo,
     insertTask,
     taskToUpdate,
-    updateTask,
+    // updateTask,
   } = useContext(TodoListContext);
 
   const addTask = () => {
-    insertTask(description, 'inProgress');
-    setDescription('');
+    const { id, token } = userInfo;
+    setData(token, '/todolist', { userId: id, description, status: 'inProgress' })
+      .then((response) => {
+        insertTask(response.description, response.status);
+        setDescription('');
+      }).catch((err) => {
+        console.error(err);
+        window.alert('Ocorreu um erro durante a gravação da tarefa. Favor tentar novamente.');
+        setDescription('');
+    });
   };
 
-  const changeTask = () => {
-    updateTask(taskToUpdate.id, description);
-    setDescription('');
+  const changeTask =  () => {
+    const { id, token } = userInfo;
+    updateData(token, `/todolist/task/${id}`, { description, status: '*' })
+      .then((response) => {
+        insertTask(response.description, response.status);
+        setDescription('');
+      }).catch((err) => {
+        console.error(err);
+        window.alert('Ocorreu um erro durante a alteração da tarefa. Favor tentar novamente.');
+        setDescription('');
+      });
   };
 
   useEffect(() => {
@@ -41,7 +59,7 @@ const TaskBar = () => {
       <button
         className="submit-button"
         data-testid="button-submit"
-        type="button"
+        type="submit"
         onClick={ () => taskToUpdate.id ? changeTask() : addTask() }
       >
         { taskToUpdate.id ? 'Alterar' : 'Adicionar' }
