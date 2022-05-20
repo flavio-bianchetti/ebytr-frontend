@@ -13,21 +13,27 @@ const Login = () => {
   const { initialization, requestAccess } = useContext(TodoListContext);
   const history = useHistory();
 
-  const login = async (event) => {
+  const login = (event) => {
     event.preventDefault();
     if (isValidEmail && isValidPassword) {
-
-      try {
-        const response = await requestLogin(
-          '/login', 
-          { email: userEmail, password: userPassword },
-        );
-        requestAccess(response.email, response.name, response.token);
-        history.push('/todolist');
-      } catch (err) {
-        console.log(err);
-        setIsInvalidUser(true);
-      }
+      requestLogin('/login', { email: userEmail, password: userPassword })
+        .then((response) => {
+          requestAccess( response.id, response.email, response.name, response.token);
+          history.push('/todolist');
+        }).catch ((err) => {
+        switch (true) {
+          case err.response.status === 404:
+            setIsInvalidUser(true);
+            break;
+          case err.response.status === 422:
+            console.log(err);
+            window.alert('Falha no processo de criptografia. Favor acionar o suporte.');
+            break;
+          default:
+            console.log(err);
+            window.alert('Falha no processo de login. Favor acionar o suporte.');
+        }
+      });
     }
   };
 
