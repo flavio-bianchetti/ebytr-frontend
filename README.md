@@ -72,6 +72,44 @@ O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bia
 - Atualizar uma tarefa da lista;
 - A tarefa deve possuir um status editável: pendente, em andamento ou pronto;
 
+### Installation
+
+1. Open the terminal, in a directory of your choice, and clone the project:
+```bash
+  git@github.com:flavio-bianchetti/ebytr-frontend.git
+```
+
+2. Enter the project directory:
+```bash
+  cd ebytr-frontend
+```
+3. Install dependencies:
+```bash
+  npm install
+```
+
+4. Configure the _[dotenv](https://www.npmjs.com/package/dotenv)_ file with your information:
+```javascript
+  // example of padding:
+  API_URL=http://localhost //path to application ebytr-backend
+  API_PORT=3002 //port used by the application ebytr-backend
+```
+5. Launch the application:
+```bash
+  npm start
+```
+---
+### Problems found:
+- Encapsulating my application with a provider took longer than I expected. I needed to review the documentation and install dependencies with specific versions.
+- Starting this project with the TDD method showed me that I'm still not able to reconcile speed and efficiency. I was able to test the login screen components and part of the task list screen tests.
+- Errors occurred when deploying the application on *Heroku* are preventing the correct remote operation of the API.
+
+### Current stages of development:
+  - There were problems installing the application on *Heroku* and their fixes are in progress.
+  - Local tests are being carried out in the application using *Docker*.
+  - Page styling will be done soon.
+  - *Tests* will be implemented soon.
+
 ### Autor:
 
 - _[Flávio Bianchetti](https://www.linkedin.com/in/flaviobianchetti/)_
