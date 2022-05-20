@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import TodoListContext from './TodoListContext';
 
 const TodoListProvider = ({ children }) => {
-  const [userInfo, setUserInfo] = useState({});
+  const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem('ebytrUser')));
   const [todoList, setTodoList] = useState([]);
   const [taskToUpdate, setTaskToUpdate] = useState({});
 
