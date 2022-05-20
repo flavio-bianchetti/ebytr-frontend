@@ -45,33 +45,6 @@ The "_Ebytr - Backend_" can be viewed _[here](https://github.com/flavio-bianchet
 
 ---
 
-### Author's considerations:
-
-- This project is under development. Wait for information.
-
-<!-- You can see the result of this project _[here]()_. -->
-
----
-
-by _[Flávio Bianchetti - 2021](https://github.com/flavio-bianchetti)_.
-
----
----
-
-# Versão em português - Ebytr - Frontend
-
-Este repositório contém o projeto "_Ebytr - Frontend_", desafio técnico - Blitz de Carreira - Trybe. Este projeto consiste em uma aplicação de lista de tarefas, feita em React, NodeJS, MongoDB e arquitetura em camadas.
-O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bianchetti/ebytr-backend)_.
-
-
-### Funcionalidades: 
-- Visualizar a lista de tarefas;
-- Esta lista deve ser ordenável por ordem alfabética, data de criação ou por status;
-- Inserir uma nova tarefa na lista;
-- Remover uma tarefa da lista;
-- Atualizar uma tarefa da lista;
-- A tarefa deve possuir um status editável: pendente, em andamento ou pronto;
-
 ### Installation
 
 1. Open the terminal, in a directory of your choice, and clone the project:
@@ -109,6 +82,26 @@ O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bia
   - Local tests are being carried out in the application using *Docker*.
   - Page styling will be done soon.
   - *Tests* will be implemented soon.
+---
+
+by _[Flávio Bianchetti - 2021](https://github.com/flavio-bianchetti)_.
+
+---
+---
+
+# Versão em português - Ebytr - Frontend
+
+Este repositório contém o projeto "_Ebytr - Frontend_", desafio técnico - Blitz de Carreira - Trybe. Este projeto consiste em uma aplicação de lista de tarefas, feita em React, NodeJS, MongoDB e arquitetura em camadas.
+O "_Ebytr - Backend_" pode ser visualizado _[aqui](https://github.com/flavio-bianchetti/ebytr-backend)_.
+
+
+### Funcionalidades: 
+- Visualizar a lista de tarefas;
+- Esta lista deve ser ordenável por ordem alfabética, data de criação ou por status;
+- Inserir uma nova tarefa na lista;
+- Remover uma tarefa da lista;
+- Atualizar uma tarefa da lista;
+- A tarefa deve possuir um status editável: pendente, em andamento ou pronto;
 
 ### Autor:
 
