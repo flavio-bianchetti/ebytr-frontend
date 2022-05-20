@@ -4,7 +4,7 @@ import TodoListContext from './TodoListContext';
 
 const TodoListProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState(JSON.parse(localStorage.getItem('ebytrUser')));
-  const [todoList, setTodoList] = useState([]);
+  const [todoList, setTodoList] = useState(JSON.parse(localStorage.getItem('ebytrTodoList')));
   const [taskToUpdate, setTaskToUpdate] = useState({});
 
   useEffect(() => {
