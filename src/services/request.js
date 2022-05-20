@@ -12,13 +12,32 @@ const setToken = (token) => {
   api.defaults.headers.common.Authorization = token;
 };
 
-const requestData = async (endpoint) => {
+const requestLogin = async (endpoint, body) => {
+  const { data } = await api.post(endpoint, body);
+  return data;
+};
+
+const requestData = async (token, endpoint) => {
+  setToken(token);
   const { data } = await api.get(endpoint);
   return data;
 };
 
-const requestLogin = async (endpoint, body) => {
+const updateData = async (token, endpoint, body) => {
+  setToken(token);
+  const { data } = await api.put(endpoint, body);
+  return data;
+};
+
+const setData = async (token, endpoint, body) => {
+  setToken(token);
   const { data } = await api.post(endpoint, body);
+  return data;
+};
+
+const deleteData = async (token, endpoint) => {
+  setToken(token);
+  const { data } = await api.delete(endpoint);
   return data;
 };
 
@@ -26,6 +45,9 @@ export default api;
 
 export {
   setToken,
+  requestLogin,
   requestData,
-  requestLogin
+  setData,
+  updateData,
+  deleteData,
 };
