@@ -10,7 +10,7 @@ const Login = () => {
   const [isValidEmail, setIsValidEmail] = useState(false);
   const [isValidPassword, setIsValidPassword] = useState(false);
   const [isInvalidUser, setIsInvalidUser] = useState(false);
-  const { requestAccess } = useContext(TodoListContext);
+  const { initialization, requestAccess } = useContext(TodoListContext);
   const history = useHistory();
 
   const login = async (event) => {
@@ -30,6 +30,10 @@ const Login = () => {
       }
     }
   };
+
+  useEffect(() => {
+    initialization();
+  }, []);
 
   useEffect(() => {
     setIsValidEmail(ValidateEmail(userEmail));
