@@ -28,7 +28,19 @@ const TodoListProvider = ({ children }) => {
     const ordenedTasks = todoList.sort((a, b) => a.id - b.id);
     const lastTask = ordenedTasks[ordenedTasks.length - 1] || { id: 0};
     const id = lastTask.id + 1;
-    const date = new Date().toLocaleString();
+    // solução adaptada do site:
+    //
+    const date = new Date().toLocaleString(
+      'pt-BR',
+      {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+      },
+    );
     const newTodoList = [...todoList, { id, description, date, status }];
     setTodoList(newTodoList);
   };
