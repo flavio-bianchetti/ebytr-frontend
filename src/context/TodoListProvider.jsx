@@ -6,8 +6,6 @@ const TodoListProvider = ({ children }) => {
   const [userInfo, setUserInfo] = useState({});
   const [todoList, setTodoList] = useState([]);
   const [taskToUpdate, setTaskToUpdate] = useState({});
-  // idtarefa, descricao, data criação, status( pendente, em andamento, pronto),
-  // ordenar por ordem alfabética, ordenar por data de criação, ordenar por status
 
   useEffect(() => {
     localStorage.setItem('ebytrUser', JSON.stringify(userInfo));
@@ -17,8 +15,13 @@ const TodoListProvider = ({ children }) => {
     localStorage.setItem('ebytrTodoList', JSON.stringify(todoList));
   }, [todoList]);
 
-  const requestAccess = (email, name, token) => {
-    setUserInfo({ email, name, token });
+  const initialization = () => {
+    setUserInfo({});
+    setTodoList([]);
+  };
+
+  const requestAccess = (id, email, name, token) => {
+    setUserInfo({ id, email, name, token });
   };
 
   const insertTask = (description, status) => {
@@ -65,9 +68,9 @@ const TodoListProvider = ({ children }) => {
   const orderBy = (field) => {
     const ordenedTasks = todoList
       .sort((a, b) => {
-        if (a[field] < b[field]){
+        if (a[field] < b[field]) {
           return -1
-        } else if (a[field] > b[field]){
+        } else if (a[field] > b[field]) {
             return 1
         } else {
           return 0
@@ -78,7 +81,9 @@ const TodoListProvider = ({ children }) => {
   };
 
   const todoListValues = {
+    initialization,
     todoList,
+    setTodoList,
     userInfo,
     insertTask,
     requestAccess,
